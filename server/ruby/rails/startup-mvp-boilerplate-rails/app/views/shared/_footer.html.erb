@@ -1,0 +1,11 @@
+<footer>
+  <% if content_for?(:body_footer_before) %>
+    <%= yield(:body_footer_before) %>
+  <% else %>
+  <% end %>
+  MAIN - FOOTER
+  <% if content_for?(:body_footer_after) %>
+    <%= yield(:body_footer_after) %>
+  <% else %>
+  <% end %>
+</footer>
