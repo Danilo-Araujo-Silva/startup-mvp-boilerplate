@@ -5,7 +5,7 @@ class Properties {
   constructor() {
     this.properties = {
       dependencies: {
-        'angular-material' : {
+        '@angular/material' : {
           enabled: false,
         },
         'animate.css': {
@@ -30,7 +30,7 @@ class Properties {
           enabled: false,
         },
         'material-components-web': {
-          enabled: false,
+          enabled: true,
         },
         'material-design-lite': {
           enabled: false,
@@ -39,7 +39,7 @@ class Properties {
           enabled: false,
         },
         'materialize-css': {
-          enabled: false,
+          enabled: true,
         },
         'primeng' : {
           enabled: false,

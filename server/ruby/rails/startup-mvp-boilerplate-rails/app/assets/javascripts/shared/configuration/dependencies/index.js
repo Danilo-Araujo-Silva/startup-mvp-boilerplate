@@ -11,7 +11,7 @@ if (dependencies['@angular/material'].enabled) {
 
 // web - utility - animation
 if (dependencies['animate.css'].enabled) {
-  let animateCss = require('animate.css');
+  // let animateCss = require('animate.css');
 } else {
 
 }
@@ -39,7 +39,8 @@ if (dependencies['flat-ui'].enabled) {
 
 // web - font - icons
 if (dependencies['font-awesome'].enabled) {
-  let fontAwesome = require('font-awesome');
+  let fontAwesome = require('./useable_stylesheets/font_awesome.useable.scss');
+  fontAwesome.use();
 } else {
 
 }
@@ -60,7 +61,8 @@ if (dependencies['jquery'].enabled) {
 
 // web - ui - material
 if (dependencies['material-components-web'].enabled) {
-
+  let materialComponentsWeb = require('./useable_stylesheets/material_components_web.useable.scss');
+  materialComponentsWeb.use();
 } else {
 
 }
@@ -81,7 +83,8 @@ if (dependencies['material-ui'].enabled) {
 
 // web - ui - material
 if (dependencies['materialize-css'].enabled) {
-  // let materializeCss = require('materialize-css');
+  let materializeCss = require('./useable_stylesheets/materialize_css.useable.scss');
+  materializeCss.use();
 } else {
 
 }

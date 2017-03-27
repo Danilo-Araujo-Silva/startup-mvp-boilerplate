@@ -1,9 +1,8 @@
 module.exports = {
-  test: /\.(lscss|lsass|lcss)$/i,
+  test: /\.useable\.(scss|sass|css)$/i,
   use: [
     {loader: "style-loader/useable"},
     {loader: "css-loader"},
-    {loader: "postcss-loader"},
     {loader: "sass-loader"},
   ],
 }
