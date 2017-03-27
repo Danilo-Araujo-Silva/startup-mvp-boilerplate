@@ -24,7 +24,7 @@ class Properties {
           },
           'react': {
             'ant-design': {
-              enabled: false,
+              enabled: true,
             },
             'material-ui': {
               enabled: false,
