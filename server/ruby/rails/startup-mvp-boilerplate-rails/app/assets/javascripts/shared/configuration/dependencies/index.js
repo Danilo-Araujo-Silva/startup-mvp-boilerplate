@@ -1,103 +1,129 @@
-// import Es6Promise from 'es6-promise';
-// Es6Promise.polyfill();
-// or
-// import 'es6-promise/auto';
-// or
-// import Promise from 'promise-polyfill';
-// if (!window.Promise) {
-//   window.Promise = Promise;
-// }
-// async function determineDate() {
-//   // console.log('import', import);
-//   const moment = await import('./file.scss');
-//   // console.log('moment', moment);
-//   return '1';
-// }
+import properties from '../properties';
 
-// async function slow() {
-//   return new Promise(function(resolve, reject) {
-//     setTimeout(function() {
-//       console.log("slow finished");
-//       resolve();
-//     }, 3000);
-//   });
-// }
-//
-// slow();
+const dependencies = properties.get().dependencies;
 
-// determineDate().then(str => console.log(str));
+// angular - ui - material
+if (dependencies['@angular/material'].enabled) {
 
-function determineDate() {
-  import('jquery/dist/jquery').then(function(asdf) {
-    console.log('asdf', asdf);
-  }).catch(function(error) {
-    console.log("Errorrrrrrr", error);
-  });
-  // import('./file.scss').then(function(moment) {
-  //   console.log(moment);
-  // }).catch(function(err) {
-  //   console.log('Failed to load moment', err);
-  // });
+} else {
+
 }
 
-determineDate();
+// web - utility - animation
+if (dependencies['animate.css'].enabled) {
+  let animateCss = require('animate.css');
+} else {
 
-
-
-var style = null;
-
-// style = require('style-loader/useable!css-loader!./file.scss');
-
-console.log('style', style);
-
-if (style && style.unuse) {
-  style.unuse();
 }
 
-// import properties from '../properties';
-//
-// const dependencies = properties.get().dependencies;
+// react - ui - material
+if (dependencies['ant-design'].enabled) {
 
-// if (dependencies.utility.jquery.enabled) {
-//   let $ = require('jquery');
-//   window.$ = window.jQuery = global.$ = global.jQuery = $;
-// }
-//
-// if (dependencies.utility['react-tap-event-plugin'].enabled) {
-//   // Needed for onTouchTap.
-//   // http://stackoverflow.com/a/34015469/988941
-//   let injectTapEventPlugin = require('react-tap-event-plugin');
-//
-//   injectTapEventPlugin();
-// }
-//
-// if (dependencies.ui.react['ant-design'].enabled) {
-//   let antd = require("antd");
-// }
+} else {
 
-// if (dependencies.ui['material-components-web'].enabled) {
-//   require('material-components-web/dist/material-components-web.min.css');
-//   import * as mdc require('material-components-web/dist/material-components-web.js');
+}
+
+// web - ui - material
+if (dependencies['bulma'].enabled) {
+
+} else {
+
+}
+
+// web - ui - material
+if (dependencies['flat-ui'].enabled) {
+
+} else {
+
+}
+
+// web - font - icons
+if (dependencies['font-awesome'].enabled) {
+  let fontAwesome = require('font-awesome');
+} else {
+
+}
+
+// web - utility - animation - hover
+if (dependencies['hover.css'].enabled) {
+
+} else {
+
+}
+
+// web - utility - multi
+if (dependencies['jquery'].enabled) {
+
+} else {
+
+}
+
+// web - ui - material
+if (dependencies['material-components-web'].enabled) {
+
+} else {
+
+}
+
+// web - ui - material (deprecated, use material-components-web prefereably)
+if (dependencies['material-design-lite'].enabled) {
+
+} else {
+
+}
+
+// react - ui - material
+if (dependencies['material-ui'].enabled) {
+
+} else {
+
+}
+
+// web - ui - material
+if (dependencies['materialize-css'].enabled) {
+  // let materializeCss = require('materialize-css');
+} else {
+
+}
+
+// angular - ui - material
+if (dependencies['primeng'].enabled) {
+
+} else {
+
+}
+
 //
-//     mdc.autoInit();
-// }
-//
-// if (dependencies.ui['material-design-lite'].enabled) {
-//   require('model/shared/configuration/ui/material-design-lite/material-design-lite');
-// }
-//
-// if (dependencies.ui['material-ui'].enabled) {
-//   require('model/shared/configuration/ui/material-ui/material-ui');
-// }
-//
-// if (dependencies.ui['materialize-css'].enabled) {
-//   require('model/shared/configuration/ui/materialize-css/materialize-css');
-// }
-//
-// if (dependencies.ui['react-toolbox'].enabled) {
-//   require('model/shared/configuration/ui/react-toolbox/react-toolbox');
-// }
-//
-// if (dependencies.ui['semantic-ui'].enabled) {
-//   require('model/shared/configuration/ui/semantic-ui/semantic-ui');
-// }
+if (dependencies['purecss'].enabled) {
+
+} else {
+
+}
+
+// react - error fix
+if (dependencies['react-tap-event-plugin'].enabled) {
+
+} else {
+
+}
+
+// react - ui - material
+if (dependencies['react-toolbox'].enabled) {
+
+} else {
+
+}
+
+// web - ui - material
+if (dependencies['semantic-ui'].enabled) {
+
+} else {
+
+}
+
+// vue - ui - material
+if (dependencies['vuetify'].enabled) {
+
+} else {
+
+}

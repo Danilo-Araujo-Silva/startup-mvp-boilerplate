@@ -5,54 +5,60 @@ class Properties {
   constructor() {
     this.properties = {
       dependencies: {
-        utility: {
-          'jquery': {
-            enabled: false,
-          },
-          'react-tap-event-plugin': {
-            enabled: false,
-          },
+        'angular-material' : {
+          enabled: false,
         },
-        ui: {
-          'angular': {
-            'angular-material' : {
-              enabled: false
-            },
-            'primeng' : {
-              enabled: false
-            },
-          },
-          'react': {
-            'ant-design': {
-              enabled: true,
-            },
-            'material-ui': {
-              enabled: false,
-            },
-            'react-toolbox': {
-              enabled: false,
-            },
-          },
-          'vue': {
-            'vuetify': {
-              enabled: false,
-            },
-          },
-          'web': {
-            'material-components-web': {
-              enabled: false,
-            },
-            'material-design-lite': {
-              enabled: false,
-            },
-            'materialize-css': {
-              enabled: true,
-            },
-            'semantic-ui': {
-              enabled: false,
-            },
-          },
-        }
+        'animate.css': {
+          enabled: false,
+        },
+        'ant-design': {
+          enabled: false,
+        },
+        'bulma': {
+          enabled: false,
+        },
+        'flat-ui': {
+          enabled: false,
+        },
+        'font-awesome': {
+          enabled: true,
+        },
+        'hover.css': {
+          enabled: false,
+        },
+        'jquery': {
+          enabled: false,
+        },
+        'material-components-web': {
+          enabled: false,
+        },
+        'material-design-lite': {
+          enabled: false,
+        },
+        'material-ui': {
+          enabled: false,
+        },
+        'materialize-css': {
+          enabled: false,
+        },
+        'primeng' : {
+          enabled: false,
+        },
+        'purecss' : {
+          enabled: false,
+        },
+        'react-tap-event-plugin': {
+          enabled: false,
+        },
+        'react-toolbox': {
+          enabled: false,
+        },
+        'semantic-ui': {
+          enabled: false,
+        },
+        'vuetify': {
+          enabled: false,
+        },
       },
       environment: {
         development: {
@@ -62,10 +68,10 @@ class Properties {
           enabled: false,
         },
         production: {
-          enabled: false
+          enabled: false,
         },
         test: {
-          enabled: false
+          enabled: false,
         }
       },
       platform: {
