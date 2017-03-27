@@ -1,10 +1,11 @@
 module.exports = {
-  test: /\.js(\.erb)?$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader',
-  options: {
-    presets: [
-      ['env', { modules: false }]
-    ]
-  }
+  test: /\.js$/,
+  exclude: /(node_modules)/,
+  use: [{
+    loader: 'babel-loader',
+    options: {
+      presets: [['es2015', {modules: false}]],
+      plugins: ['syntax-dynamic-import']
+    }
+  }]
 }
