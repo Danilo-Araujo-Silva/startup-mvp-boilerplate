@@ -30,6 +30,9 @@
   <%= content_for :body_footer do %><% end %>
   <%= content_for :body_footer_before do %><% end %>
   <%= content_for :body_footer_after do %><% end %>
+  <%= content_for :body_css do %><% end %>
+  <%= content_for :body_css_before do %><% end %>
+  <%= content_for :body_css_after do %><% end %>
   <%= content_for :body_js do %><% end %>
   <%= content_for :body_js_before do %><% end %>
   <%= content_for :body_js_after do %><% end %>
@@ -155,6 +158,20 @@
               <%= yield(:body_footer) %>
             <% else %>
               <%= render :partial => 'shared/footer' %>
+            <% end %>
+
+            <% if content_for?(:body_css) %>
+              <%= yield(:body_css) %>
+            <% else %>
+              <% if content_for?(:body_css_before) %>
+                <%= yield(:body_css_before) %>
+              <% else %>
+              <% end %>
+              <%= stylesheet_pack_tag 'body' %>
+              <% if content_for?(:body_css_after) %>
+                <%= yield(:body_css_after) %>
+              <% else %>
+              <% end %>
             <% end %>
 
             <% if content_for?(:body_js) %>
