@@ -1,5 +1,5 @@
 var path = require('path');
-let root = path.resolve(__dirname, '../../../', 'node_modules');
+let node_modules_path = path.resolve(__dirname, '../../../', 'node_modules');
 
 module.exports = {
   test: /\.useable\.(scss|sass|css)$/i,
@@ -9,7 +9,7 @@ module.exports = {
     {
       loader: "sass-loader",
       options: {
-        includePaths: [root]
+        includePaths: [node_modules_path]
       }
     },
   ],
