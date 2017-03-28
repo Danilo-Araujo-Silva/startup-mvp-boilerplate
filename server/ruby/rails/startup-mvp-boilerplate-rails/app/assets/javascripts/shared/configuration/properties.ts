@@ -36,13 +36,13 @@ class Properties {
           enabled: true,
         },
         'hover.css': {
-          enabled: false,
+          enabled: true,
         },
         'jquery': {
           enabled: true,
         },
         'material-components-web': {
-          enabled: false,
+          enabled: true,
         },
         'material-design-lite': {
           enabled: false,
@@ -66,10 +66,10 @@ class Properties {
           enabled: false,
         },
         'semantic-ui': {
-          enabled: false,
+          enabled: true,
         },
         'tether': {
-          enabled: true,
+          enabled: false,
         },
         'vuetify': {
           enabled: false,
