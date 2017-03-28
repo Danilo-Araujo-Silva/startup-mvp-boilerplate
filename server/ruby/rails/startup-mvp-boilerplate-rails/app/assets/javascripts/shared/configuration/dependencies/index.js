@@ -2,143 +2,175 @@ import properties from '../properties';
 
 const dependencies = properties.get().dependencies;
 
+function isEnabled(dependencyId) {
+  if (dependencies && dependencies[dependencyId] && dependencies[dependencyId].enabled) {
+    return true;
+  }
+
+  return false;
+}
+
 // angular - ui - material
-if (dependencies['@angular/material'].enabled) {
-  let angularMaterial = require('./useable_stylesheets/angular_material.useable.scss');
-  angularMaterial.use();
+if (isEnabled('@angular/material')) {
+  let angularMaterialStyles = require('./useable_stylesheets/angular_material.useable.scss');
+  angularMaterialStyles.use();
 } else {
 
 }
 
 // web - utility - animation
-if (dependencies['animate.css'].enabled) {
-  let animateCSS = require('./useable_stylesheets/animate_css.useable.scss');
-  animateCSS.use();
+if (isEnabled('animate.css')) {
+  let animateCSSStyles = require('./useable_stylesheets/animate_css.useable.scss');
+  animateCSSStyles.use();
 } else {
 
 }
 
 // react - ui - material
-if (dependencies['ant-design'].enabled) {
-  let antDesign = require('./useable_stylesheets/ant_design.useable.scss');
-  antDesign.use();
+if (isEnabled('ant-design')) {
+  let antDesignStyles = require('./useable_stylesheets/ant_design.useable.scss');
+  antDesignStyles.use();
 } else {
 
 }
 
 // web - ui - material
-if (dependencies['bulma'].enabled) {
-  let bulma = require('./useable_stylesheets/bulma.useable.scss');
-  bulma.use();
+if (isEnabled('bulma')) {
+  let bulmaStyles = require('./useable_stylesheets/bulma.useable.scss');
+  bulmaStyles.use();
 } else {
 
 }
 
 // web - ui - material
-if (dependencies['flat-ui'].enabled) {
-  let flatUI = require('./useable_stylesheets/flat_ui.useable.scss');
-  flatUI.use();
+if (isEnabled('flat-ui')) {
+  let flatUIStyles = require('./useable_stylesheets/flat_ui.useable.scss');
+  flatUIStyles.use();
 } else {
 
 }
 
 // web - font - icons
-if (dependencies['font-awesome'].enabled) {
-  let fontAwesome = require('./useable_stylesheets/font_awesome.useable.scss');
-  fontAwesome.use();
+if (isEnabled('font-awesome')) {
+  let fontAwesomeStyles = require('./useable_stylesheets/font_awesome.useable.scss');
+  fontAwesomeStyles.use();
+} else {
+
+}
+
+// web - font - icons
+if (isEnabled('font-material-design-icons')) {
+  let materialDesignIconsStyles = require('./useable_stylesheets/font_material_design_icons.useable.scss');
+  materialDesignIconsStyles.use();
+} else {
+
+}
+
+// web - font - icons
+if (isEnabled('font-roboto')) {
+  let robotoFontStyles = require('./useable_stylesheets/font_roboto.useable.scss');
+  robotoFontStyles.use();
 } else {
 
 }
 
 // web - utility - animation - hover
-if (dependencies['hover.css'].enabled) {
-  let hoverCSS = require('./useable_stylesheets/hover.useable.scss');
-  hoverCSS.use();
+if (isEnabled('hover.css')) {
+  let hoverCSSStyles = require('./useable_stylesheets/hover.useable.scss');
+  hoverCSSStyles.use();
 } else {
 
 }
 
 // web - utility - multi
-if (dependencies['jquery'].enabled) {
-  let jQuery = require('jquery');
+if (isEnabled('jquery')) {
+  let jQuery = require('jquery/dist/jquery');
+  window.$ = window.jquery = window.jQuery = global.$ = global.jquery = global.jQuery = jQuery;
 } else {
 
 }
 
 // web - ui - material
-if (dependencies['material-components-web'].enabled) {
-  let materialComponentsWeb = require('./useable_stylesheets/material_components_web.useable.scss');
-  materialComponentsWeb.use();
+if (isEnabled('material-components-web')) {
+  let materialComponentsWebStyles = require('./useable_stylesheets/material_components_web.useable.scss');
+  materialComponentsWebStyles.use();
+
+  let materialComponentsWebJS = require('material-components-web/dist/material-components-web.js');
+  materialComponentsWebJS.autoInit();
 } else {
 
 }
 
 // web - ui - material (deprecated, use material-components-web prefereably)
-if (dependencies['material-design-lite'].enabled) {
-  let materialDesignLite = require('./useable_stylesheets/material_design_lite.useable.scss');
-  materialDesignLite.use();
+if (isEnabled('material-design-lite')) {
+  let materialDesignLiteStyles = require('./useable_stylesheets/material_design_lite.useable.scss');
+  materialDesignLiteStyles.use();
+
+  let materialDesignLiteJS = require('material-design-lite/material.js');
 } else {
 
 }
 
 // react - ui - material
-if (dependencies['material-ui'].enabled) {
-  let materialUI = require('./useable_stylesheets/material_ui.useable.scss');
-  materialUI.use();
+if (isEnabled('material-ui')) {
+  let materialUIStyles = require('./useable_stylesheets/material_ui.useable.scss');
+  materialUIStyles.use();
 } else {
 
 }
 
 // web - ui - material
-if (dependencies['materialize-css'].enabled) {
-  let materializeCss = require('./useable_stylesheets/materialize_css.useable.scss');
-  materializeCss.use();
+if (isEnabled('materialize-css')) {
+  let materializeCssStyles = require('./useable_stylesheets/materialize_css.useable.scss');
+  materializeCssStyles.use();
+
+  require('materialize-css/dist/js/materialize.js');
 } else {
 
 }
 
 // angular - ui - material
-if (dependencies['primeng'].enabled) {
-  let primeng = require('./useable_stylesheets/primeng.useable.scss');
-  primeng.use();
+if (isEnabled('primeng')) {
+  let primengStyles = require('./useable_stylesheets/primeng.useable.scss');
+  primengStyles.use();
 } else {
 
 }
 
 //
-if (dependencies['purecss'].enabled) {
-  let pureCSS = require('./useable_stylesheets/purecss.useable.scss');
+if (isEnabled('purecss')) {
+  let pureCSSStyles = require('./useable_stylesheets/purecss.useable.scss');
 } else {
 
 }
 
 // react - error fix
-if (dependencies['react-tap-event-plugin'].enabled) {
+if (isEnabled('react-tap-event-plugin')) {
   let reactTapEventoPlugin = require('react-tap-event-plugin');
 } else {
 
 }
 
 // react - ui - material
-if (dependencies['react-toolbox'].enabled) {
-  let reactToolbox = require('./useable_stylesheets/react_toolbox.useable.scss');
-  reactToolbox.use();
+if (isEnabled('react-toolbox')) {
+  let reactToolboxStyles = require('./useable_stylesheets/react_toolbox.useable.scss');
+  reactToolboxStyles.use();
 } else {
 
 }
 
 // web - ui - material
-if (dependencies['semantic-ui'].enabled) {
-  let semanticUI = require('./useable_stylesheets/semantic_ui.useable.scss');
-  semanticUI.use();
+if (isEnabled('semantic-ui')) {
+  let semanticUIStyles = require('./useable_stylesheets/semantic_ui.useable.scss');
+  semanticUIStyles.use();
 } else {
 
 }
 
 // vue - ui - material
-if (dependencies['vuetify'].enabled) {
-  let vuetify = require('./useable_stylesheets/vuetify.useable.scss');
-  vuetify.use();
+if (isEnabled('vuetify')) {
+  let vuetifyStyles = require('./useable_stylesheets/vuetify.useable.scss');
+  vuetifyStyles.use();
 } else {
 
 }

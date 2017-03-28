@@ -23,6 +23,12 @@ class Properties {
         'font-awesome': {
           enabled: true,
         },
+        'font-material-design-icons': {
+          enabled: true,
+        },
+        'font-roboto': {
+          enabled: true,
+        },
         'hover.css': {
           enabled: false,
         },
@@ -30,7 +36,7 @@ class Properties {
           enabled: false,
         },
         'material-components-web': {
-          enabled: true,
+          enabled: false,
         },
         'material-design-lite': {
           enabled: false,
@@ -39,7 +45,7 @@ class Properties {
           enabled: false,
         },
         'materialize-css': {
-          enabled: true,
+          enabled: false,
         },
         'primeng' : {
           enabled: false,
