@@ -15,7 +15,7 @@ class Properties {
           enabled: false,
         },
         'bootstrap': {
-          enabled: false,
+          enabled: true,
         },
         'bootstrap-material-design': {
           enabled: true,
