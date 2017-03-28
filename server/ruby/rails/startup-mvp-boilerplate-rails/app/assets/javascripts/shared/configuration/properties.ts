@@ -14,6 +14,12 @@ class Properties {
         'ant-design': {
           enabled: false,
         },
+        'bootstrap': {
+          enabled: false,
+        },
+        'bootstrap-material-design': {
+          enabled: true,
+        },
         'bulma': {
           enabled: false,
         },
@@ -60,6 +66,9 @@ class Properties {
           enabled: false,
         },
         'semantic-ui': {
+          enabled: false,
+        },
+        'tether': {
           enabled: true,
         },
         'vuetify': {

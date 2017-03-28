@@ -172,6 +172,33 @@ if (isEnabled('semantic-ui')) {
 
 }
 
+// utility - ui - positioning
+if (isEnabled('tether')) {
+  let tetherJS = require('tether/dist/js/tether.min.js');
+  window.Tether = global.Tether = tetherJS;
+}
+
+// web - ui - material
+// dependencies: jquery, tether
+if (isEnabled('bootstrap')) {
+  let bootstrapStyles = require('./useable_stylesheets/bootstrap.useable.scss');
+  bootstrapStyles.use();
+
+  let bootstrapJS = require('bootstrap/dist/js/bootstrap.js');
+}
+
+// web - ui - material
+// dependencies: jquery
+if (isEnabled('bootstrap-material-design')) {
+  let bootstrapMaterialDesignStyles = require('./useable_stylesheets/bootstrap_material_design.useable.scss');
+  bootstrapMaterialDesignStyles.use();
+
+  require('bootstrap-material-design/dist/js/ripples.js');
+  let bootstrapMaterialDesignJS = require('bootstrap-material-design/dist/js/material.js');
+  $.material.init();
+}
+
+
 // vue - ui - material
 if (isEnabled('vuetify')) {
   let vuetifyStyles = require('./useable_stylesheets/vuetify.useable.scss');

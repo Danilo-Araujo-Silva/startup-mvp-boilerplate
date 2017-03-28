@@ -14,6 +14,10 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.0.0.tgz#fd877e074b29dfa9c63b96a21995fc7556d423a3"
 
+"@angular/http@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-4.0.0.tgz#45a538eac42a0b13f3744c7e8bafeb17d58da31c"
+
 "@angular/material@^2.0.0-beta.2":
   version "2.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.2.tgz#65ee8733990347b7518b7f42113e02e069dc109b"
@@ -1194,6 +1198,24 @@ boom@2.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
+
+bootstrap-material-design@^0.5.10:
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/bootstrap-material-design/-/bootstrap-material-design-0.5.10.tgz#b36b0035b528a821c1758695b25d25e25e121372"
+  dependencies:
+    bootstrap ">=3.0"
+    jquery ">=1.9.1"
+
+bootstrap@4.0.0-alpha.6:
+  version "4.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-alpha.6.tgz#4f54dd33ac0deac3b28407bc2df7ec608869c9c8"
+  dependencies:
+    jquery ">=1.9.1"
+    tether "^1.4.0"
+
+bootstrap@>=3.0:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
 
 bowser@^1.0.0:
   version "1.6.0"
@@ -3589,7 +3611,7 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-"jquery@2 - 3", jquery@>=1.6, jquery@>=1.7.2, jquery@^3.1.1, jquery@^3.2.1:
+"jquery@2 - 3", jquery@>=1.6, jquery@>=1.7.2, jquery@>=1.9.1, jquery@^3.1.1, jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -3743,7 +3765,7 @@ less-loader@^4.0.2:
     loader-utils "^1.0.2"
     pify "^2.3.0"
 
-"less@2.6.x || ^2.7.1":
+"less@2.6.x || ^2.7.1", less@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/less/-/less-2.7.2.tgz#368d6cc73e1fb03981183280918743c5dcf9b3df"
   optionalDependencies:
@@ -6734,6 +6756,10 @@ ternary-stream@^2.0.1:
     fork-stream "^0.0.4"
     merge-stream "^1.0.0"
     through2 "^2.0.1"
+
+tether@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.0.tgz#0f9fa171f75bf58485d8149e94799d7ae74d1c1a"
 
 textextensions@~1.0.0:
   version "1.0.2"
