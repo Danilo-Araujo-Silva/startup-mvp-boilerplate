@@ -33,7 +33,7 @@ class Properties {
           enabled: false,
         },
         'jquery': {
-          enabled: false,
+          enabled: true,
         },
         'material-components-web': {
           enabled: false,
@@ -60,7 +60,7 @@ class Properties {
           enabled: false,
         },
         'semantic-ui': {
-          enabled: false,
+          enabled: true,
         },
         'vuetify': {
           enabled: false,

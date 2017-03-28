@@ -140,6 +140,7 @@ if (isEnabled('primeng')) {
 //
 if (isEnabled('purecss')) {
   let pureCSSStyles = require('./useable_stylesheets/purecss.useable.scss');
+  pureCSSStyles.use();
 } else {
 
 }
@@ -147,6 +148,7 @@ if (isEnabled('purecss')) {
 // react - error fix
 if (isEnabled('react-tap-event-plugin')) {
   let reactTapEventoPlugin = require('react-tap-event-plugin');
+  reactTapEventoPlugin();
 } else {
 
 }
@@ -160,9 +162,12 @@ if (isEnabled('react-toolbox')) {
 }
 
 // web - ui - material
+// dependencies: jquery
 if (isEnabled('semantic-ui')) {
   let semanticUIStyles = require('./useable_stylesheets/semantic_ui.useable.scss');
   semanticUIStyles.use();
+
+  let semanticUIJS = require('semantic-ui/dist/semantic.js');
 } else {
 
 }
