@@ -16,4 +16,8 @@ class PublicController < ApplicationController
 
   def terms_of_service
   end
+
+  def permited?
+    true
+  end
 end
