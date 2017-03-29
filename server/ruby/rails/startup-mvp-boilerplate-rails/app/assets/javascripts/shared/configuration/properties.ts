@@ -36,7 +36,7 @@ class Properties {
           enabled: true,
         },
         'hover.css': {
-          enabled: true,
+          enabled: false,
         },
         'jquery': {
           enabled: true,
@@ -66,7 +66,7 @@ class Properties {
           enabled: false,
         },
         'semantic-ui': {
-          enabled: false,
+          enabled: true,
         },
         'tether': {
           enabled: false,
