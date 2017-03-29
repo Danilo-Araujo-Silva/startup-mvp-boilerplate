@@ -14,3 +14,9 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.irregular 'user_group', 'users_groups'
+  inflect.irregular 'userGroup', 'usersGroups'
+  inflect.irregular 'UserGroup', 'UsersGroups'
+end
