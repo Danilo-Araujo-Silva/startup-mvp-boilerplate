@@ -90,6 +90,14 @@ if (isEnabled('jquery')) {
 
 }
 
+// rails
+// Unobtrusive scripting adapter, necessary for routes.
+if (isEnabled('jquery-ujs')) {
+  let jqueryUJS = require('jquery-ujs');
+} else {
+
+}
+
 // web - ui - material
 if (isEnabled('material-components-web')) {
   let materialComponentsWebStyles = require('./useable_stylesheets/material_components_web.useable.scss');
@@ -145,6 +153,14 @@ if (isEnabled('purecss')) {
 
 }
 
+// rails
+// Unobtrusive scripting adapter, necessary for routes.
+if (isEnabled('rails-ujs')) {
+  let railsUJS = require('rails-ujs');
+} else {
+
+}
+
 // react - error fix
 if (isEnabled('react-tap-event-plugin')) {
   let reactTapEventoPlugin = require('react-tap-event-plugin');
@@ -176,6 +192,12 @@ if (isEnabled('semantic-ui')) {
 if (isEnabled('tether')) {
   let tetherJS = require('tether/dist/js/tether.min.js');
   window.Tether = global.Tether = tetherJS;
+}
+
+// rails
+// Rails dependency.
+if (isEnabled('turbolinks')) {
+  let turbolinks = require('turbolinks');
 }
 
 // web - ui - material
