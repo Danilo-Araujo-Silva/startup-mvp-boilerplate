@@ -36,6 +36,23 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# SHA-3 hashing algorithm
+gem 'sha3'
+# Validation for e-mails
+gem 'validates_email_format_of'
+# Autenthication
+gem 'devise'
+# Social network authentication with Omniauth
+gem 'omniauth'
+gem 'omniauth-github'
+gem "omniauth-google-oauth2"
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+# Payment Gateways with Active Merchant
+gem 'activemerchant'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
