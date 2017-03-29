@@ -1,6 +1,8 @@
 class UserGroup < ApplicationRecord
+  validates :grant, presence: { message: 'must be defined.'}, allow_blank: true
+
   belongs_to :user
-  belongs_to :permission
+  belongs_to :group
 
   @@grant_types = ['', '<', '<=', '=', '>', '>=', '<=>']
 
@@ -12,7 +14,5 @@ class UserGroup < ApplicationRecord
 
   def _validate
     super
-
-    validates :grant, presence: { message: 'must be defined.'}, allow_blank: true
   end
 end
