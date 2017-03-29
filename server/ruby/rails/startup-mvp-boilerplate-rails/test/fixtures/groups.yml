@@ -10,7 +10,7 @@ root:
 
 one:
   parent_id: 1
-  name: 'test 1'
+  title: 'test 1'
   description: 'Test 1 group.'
   created_by_id: 1
   updated_by_id: 1
