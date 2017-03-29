@@ -1,4 +1,28 @@
 class User < ApplicationRecord
+  validates :username, presence: { message: 'cannot be empty.' }, allow_blank: false
+  validates :name, presence: { message: 'cannot be empty.'}, allow_blank: false
+  validates :email, presence: { message: 'cannot be empty.' }, allow_blank: false
+  validates_email_format_of :email, { message: 'invalid.' }
+  validates :email, uniqueness: { message: 'has already been taken.' }
+  validates :encrypted_password, presence: { message: "cannot be empty." }
+
+  devise :database_authenticatable,
+    :registerable,
+    :recoverable,
+    :rememberable,
+    :trackable,
+    :validatable,
+    :confirmable,
+    :lockable,
+    :timeoutable,
+    :omniauthable,
+    :omniauth_providers => [
+      :github,
+      :google_oauth2,
+      :facebook,
+      :linkedin,
+      :twitter
+    ]
 
   def self.main_users
     if defined? @@main_users
@@ -31,31 +55,6 @@ class User < ApplicationRecord
 
   def _validate
     super
-
-    validates :username, presence: { message: 'cannot be empty.' }, allow_blank: false
-    validates :name, presence: { message: 'cannot be empty.'}, allow_blank: false
-    validates :email, presence: { message: 'cannot be empty.' }, allow_blank: false
-    validates_email_format_of :email, { message: 'invalid.' }
-    validates :email, uniqueness: { message: 'has already been taken.' }
-    validates :encrypted_password, presence: { message: "cannot be empty." }
-
-    devise :database_authenticatable,
-      :registerable,
-      :recoverable,
-      :rememberable,
-      :trackable,
-      :validatable,
-      :confirmable,
-      :lockable,
-      :timeoutable,
-      :omniauthable,
-      :omniauth_providers => [
-        :github,
-        :google_oauth2,
-        :facebook,
-        :linkedin,
-        :twitter
-      ]
   end
 
   def _sanitize
