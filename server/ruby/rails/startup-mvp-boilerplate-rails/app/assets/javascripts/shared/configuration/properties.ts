@@ -41,6 +41,9 @@ class Properties {
         'jquery': {
           enabled: true,
         },
+        'jquery-ujs': {
+          enabled: true,
+        },
         'material-components-web': {
           enabled: true,
         },
@@ -53,10 +56,13 @@ class Properties {
         'materialize-css': {
           enabled: false,
         },
-        'primeng' : {
+        'primeng': {
           enabled: false,
         },
-        'purecss' : {
+        'purecss': {
+          enabled: false,
+        },
+        'rails-ujs': {
           enabled: false,
         },
         'react-tap-event-plugin': {
@@ -70,6 +76,9 @@ class Properties {
         },
         'tether': {
           enabled: false,
+        },
+        'turbolinks': {
+          enabled: true,
         },
         'vuetify': {
           enabled: false,
