@@ -5,6 +5,12 @@ class PublicController < ApplicationController
   def careers
   end
 
+  def contact
+  end
+
+  def frequently_asked_questions
+  end
+
   def help
   end
 

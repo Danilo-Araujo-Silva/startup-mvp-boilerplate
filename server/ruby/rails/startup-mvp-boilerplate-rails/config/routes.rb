@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'about', to: 'public#about'
   get 'careers', to: 'public#careers'
+  get 'contact', to: 'public#contact'
+  get 'frequently_asked_questions', to: 'public#frequently_asked_questions'
   get 'help', to: 'public#help'
   get 'landing', to: 'public#landing'
   get 'privacy_policy', to: 'public#privacy_policy'
