@@ -1,4 +1,5 @@
 var path = require('path');
+let assets_stylesheets = path.resolve(__dirname, '../../../', 'app', 'assets', 'stylesheets');
 let node_modules_path = path.resolve(__dirname, '../../../', 'node_modules');
 
 module.exports = {
@@ -9,7 +10,10 @@ module.exports = {
     {
       loader: "sass-loader",
       options: {
-        includePaths: [node_modules_path]
+        includePaths: [
+          assets_stylesheets,
+          node_modules_path
+        ]
       }
     },
   ],

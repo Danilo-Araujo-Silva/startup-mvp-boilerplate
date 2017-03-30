@@ -72,7 +72,7 @@ class Properties {
           enabled: false,
         },
         'semantic-ui': {
-          enabled: true,
+          enabled: false,
         },
         'tether': {
           enabled: false,

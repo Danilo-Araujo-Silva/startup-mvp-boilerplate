@@ -228,3 +228,6 @@ if (isEnabled('vuetify')) {
 } else {
 
 }
+
+let headCSS = require('./useable_stylesheets/head.useable.scss');
+headCSS.use();
