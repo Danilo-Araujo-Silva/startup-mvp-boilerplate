@@ -1,11 +1,9 @@
 class Development::DevelopmentController < Development::MainController
 
-  def dashboard
+  def self.controller_path
+    'development'
   end
 
-  def permited?
-    authenticate_user!
-
-    true
+  def dashboard
   end
 end

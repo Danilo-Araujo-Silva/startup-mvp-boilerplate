@@ -1,5 +1,9 @@
 class Public::PublicController < Public::MainController
 
+  def self.controller_path
+    'public'
+  end
+
   def about
   end
 
@@ -22,9 +26,5 @@ class Public::PublicController < Public::MainController
   end
 
   def terms_of_service
-  end
-
-  def permited?
-    true
   end
 end

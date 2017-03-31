@@ -2,7 +2,9 @@ class Administration::MainController < ApplicationController
 
   layout 'subsystem/administration'
 
-  def self.controller_path
-    'administration'
+  def permited?
+    authenticate_user!
+
+    true
   end
 end

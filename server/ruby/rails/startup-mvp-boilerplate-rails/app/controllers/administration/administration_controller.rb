@@ -1,11 +1,9 @@
 class Administration::AdministrationController < Administration::MainController
 
-  def dashboard
+  def self.controller_path
+    'administration'
   end
 
-  def permited?
-    authenticate_user!
-
-    true
+  def dashboard
   end
 end

@@ -2,7 +2,7 @@ class Public::MainController < ApplicationController
 
   layout 'subsystem/public'
 
-  def self.controller_path
-    'public'
+  def permited?
+    true
   end
 end
