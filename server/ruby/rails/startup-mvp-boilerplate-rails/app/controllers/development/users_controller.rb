@@ -1,4 +1,5 @@
-class Development::UsersController < ApplicationController
+class Development::UsersController < Development::MainController
+
   before_action :authenticate_user!, :set_user, only: [ :show, :edit, :update, :destroy]
 
   # GET /users

@@ -277,5 +277,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   # Parent/main controller for devise.
-  config.parent_controller = 'User::DeviseController'
+  config.parent_controller = 'User::Devise::DeviseController'
 end

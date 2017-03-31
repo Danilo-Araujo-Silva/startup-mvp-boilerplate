@@ -14,25 +14,33 @@ Rails.application.routes.draw do
 
   namespace :administration do
     root to: 'administration#dashboard'
-    get 'dashboard', to: 'administration#dashboard'
+    get 'dashboard', to: redirect('/administration')
   end
 
   namespace :development do
     root to: 'development#dashboard'
-    get 'dashboard', to: 'development#dashboard'
+    get 'dashboard', to: redirect('/development')
     resources :users
   end
 
   namespace :user do
     root to: 'user#dashboard'
-    get 'dashboard', to: 'user#dashboard'
+    get 'dashboard', to: redirect('/user')
   end
 
   devise_scope :user do
     get '/create_account' => 'devise/registrations#new', as: 'new_user_registration' # custom path to sign_up/registration
   end
 
-  devise_for :user, :controllers => { :omniauth_callbacks => 'user/devise_controller/omniauth_callbacks' }
+  devise_for :user,
+    :controllers => {
+      :confirmations => 'user/devise/confirmations',
+      :omniauth_callbacks => 'user/devise/omniauth_callbacks',
+      :passwords => 'user/devise/passwords',
+      :registrations => 'user/devise/registrations',
+      :sessions => 'user/devise/sessions',
+      :unlocks => 'user/devise/unlocks'
+    }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,4 @@
-class Public::ErrorController < ApplicationController
+class Public::ErrorController < Public::MainController
 
   layout 'subsystem/public'
 

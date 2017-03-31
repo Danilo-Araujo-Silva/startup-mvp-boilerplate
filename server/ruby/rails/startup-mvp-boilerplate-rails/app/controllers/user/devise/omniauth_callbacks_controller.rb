@@ -1,8 +1,4 @@
-class User::DeviseController < ApplicationController
-  layout 'subsystem/public'
-end
-
-class User::DeviseController::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class User::Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     @user = User.from_omniauth(request.env["omniauth.auth"])
 
@@ -15,4 +11,3 @@ class User::DeviseController::OmniauthCallbacksController < Devise::OmniauthCall
     end
   end
 end
-

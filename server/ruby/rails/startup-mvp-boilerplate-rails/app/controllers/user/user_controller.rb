@@ -1,4 +1,4 @@
-class User::UserController < ApplicationController
+class User::UserController < User::MainController
 
   layout 'subsystem/user'
 

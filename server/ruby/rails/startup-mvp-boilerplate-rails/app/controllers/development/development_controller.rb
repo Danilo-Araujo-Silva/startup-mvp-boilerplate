@@ -1,10 +1,4 @@
-class Development::DevelopmentController < ApplicationController
-
-  layout 'subsystem/development'
-
-  def self.controller_path
-    'development'
-  end
+class Development::DevelopmentController < Development::MainController
 
   def dashboard
   end

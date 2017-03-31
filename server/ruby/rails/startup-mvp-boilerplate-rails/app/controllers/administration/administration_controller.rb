@@ -1,10 +1,4 @@
-class Administration::AdministrationController < ApplicationController
-
-  layout 'subsystem/administration'
-
-  def self.controller_path
-    'administration'
-  end
+class Administration::AdministrationController < Administration::MainController
 
   def dashboard
   end
