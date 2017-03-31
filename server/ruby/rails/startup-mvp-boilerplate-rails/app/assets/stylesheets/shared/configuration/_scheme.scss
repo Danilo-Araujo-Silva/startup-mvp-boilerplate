@@ -1449,13 +1449,16 @@ $scheme: map-merge(
           .md-color-#{$selector} {
             color: $value;
           }
+
           .md-background-#{$selector} {
             background-color: $value;
           }
+
           .md-#{$selector} {
             color: $value;
             background-color: $inverted-value;
           }
+
           .md-inverted-#{$selector} {
             color: $inverted-value;
             background-color: $value;
