@@ -1,32 +1,38 @@
 Rails.application.routes.draw do
-  root to: "public#landing"
+  root to: 'public/public#landing'
+
+  get 'about', to: 'public/public#about'
+  get 'careers', to: 'public/public#careers'
+  get 'contact', to: 'public/public#contact'
+  get 'frequently_asked_questions', to: 'public/public#frequently_asked_questions'
+  get 'help', to: 'public/public#help'
+  get 'landing', to: 'public/public#landing'
+  get 'privacy_policy', to: 'public/public#privacy_policy'
+  get 'sitemap', to: 'public/public#sitemap'
+  get 'terms_of_service', to: 'public/public#terms_of_service'
+  get 'error/not_found', to: 'public/error#not_found'
 
   namespace :administration do
-    get 'dashboard'
+    root to: 'administration#dashboard'
+    get 'dashboard', to: 'administration#dashboard'
   end
 
   namespace :development do
-    get 'dashboard'
+    root to: 'development#dashboard'
+    get 'dashboard', to: 'development#dashboard'
+    resources :users
   end
-
-  get 'about', to: 'public#about'
-  get 'careers', to: 'public#careers'
-  get 'contact', to: 'public#contact'
-  get 'frequently_asked_questions', to: 'public#frequently_asked_questions'
-  get 'help', to: 'public#help'
-  get 'landing', to: 'public#landing'
-  get 'privacy_policy', to: 'public#privacy_policy'
-  get 'sitemap', to: 'public#sitemap'
-  get 'terms_of_service', to: 'public#terms_of_service'
-  get 'error/not_found', to: 'public/error#not_found'
 
   namespace :user do
-    get 'dashboard'
+    root to: 'user#dashboard'
+    get 'dashboard', to: 'user#dashboard'
   end
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users_controller/omniauth_callbacks" }
+  devise_scope :user do
+    get '/create_account' => 'devise/registrations#new', as: 'new_user_registration' # custom path to sign_up/registration
+  end
 
-  # resources :users
+  devise_for :user, :controllers => { :omniauth_callbacks => 'user/user_controller/omniauth_callbacks' }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

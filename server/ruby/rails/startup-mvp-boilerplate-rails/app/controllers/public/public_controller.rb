@@ -1,4 +1,11 @@
-class PublicController < ApplicationController
+class Public::PublicController < ApplicationController
+
+  layout 'subsystem/public'
+
+  def self.controller_path
+    'public'
+  end
+
   def about
   end
 
