@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     get '/create_account' => 'devise/registrations#new', as: 'new_user_registration' # custom path to sign_up/registration
   end
 
-  devise_for :user, :controllers => { :omniauth_callbacks => 'user/user_controller/omniauth_callbacks' }
+  devise_for :user, :controllers => { :omniauth_callbacks => 'user/devise_controller/omniauth_callbacks' }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
