@@ -2,6 +2,9 @@ class Group < ApplicationRecord
   has_many :children, :class_name => Group.name, :foreign_key => "parent_id"
   belongs_to :parent, :class_name => Group.name, :foreign_key => "parent_id", optional: true
 
+  validates :title, presence: { message: 'cannot be empty.'}, allow_blank: false
+  validates :description, presence: { message: 'cannot be empty.'}, allow_blank: false
+
   @@breadcrumb_by_ids_separator = '.'
   @@breadcrumb_by_titles_separator = ' > '
 

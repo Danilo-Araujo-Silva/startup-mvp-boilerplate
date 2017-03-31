@@ -11,6 +11,16 @@ class PublicControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get contact" do
+    get contact_url
+    assert_response :success
+  end
+
+  test "should get frequently asked questions" do
+    get frequently_asked_questions_url
+    assert_response :success
+  end
+
   test "should get help" do
     get help_url
     assert_response :success
