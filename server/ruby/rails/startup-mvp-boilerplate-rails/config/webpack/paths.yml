@@ -4,6 +4,7 @@ entry: packs
 output: public
 node_modules: node_modules
 source: app/javascript
+stylesheets: app/assets/stylesheets
 extensions:
   - .coffee
   - .js
