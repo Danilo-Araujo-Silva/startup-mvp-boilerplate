@@ -110,7 +110,7 @@ class Properties {
         'font-awesome': {
           enabled: true,
         },
-        'font-material-design-icons': {
+        'font-material-icons': {
           enabled: true,
         },
         'font-roboto': {
