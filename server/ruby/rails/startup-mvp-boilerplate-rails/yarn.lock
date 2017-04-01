@@ -241,6 +241,10 @@
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@material/typography/-/typography-0.2.0.tgz#6cbf75df671ba2412b70e269d5efbb9a8d1431db"
 
+"@types/jquery@^2.0.41":
+  version "2.0.41"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.41.tgz#b87ba051011f99edbe586d8f97282e7786e01a6d"
+
 "@types/node@^7.0.5":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.11.tgz#55680189f2335f080f0aeb57871f0b9823646d89"
