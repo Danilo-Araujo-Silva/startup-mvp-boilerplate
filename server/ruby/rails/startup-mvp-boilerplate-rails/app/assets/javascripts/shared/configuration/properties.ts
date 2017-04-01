@@ -120,7 +120,7 @@ class Properties extends MultilevelObject {
           enabled: false,
         },
         react: {
-          enabled: true,
+          enabled: false,
         },
         vue: {
           enabled: false,
