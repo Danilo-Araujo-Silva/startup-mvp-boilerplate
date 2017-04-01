@@ -1,79 +1,15 @@
-const arrayKeysToString = function(keys: Array<string>) {
-  return keys.map(key => {
-    return `["${key.escapeDoubleQuotes()}"]`
-  }).join('');
-};
+import MultilevelObject from "../helpers/multilevel_object";
 
-const exists = function(object: Object, keys: Array<string>) {
-  try {
-    if (object == null || keys == null) {
-      return false;
-    }
-
-    get(object, keys);
-
-    return true;
-  } catch (error) {
-    return false;
-  }
-};
-
-const get = function(object: Object, keys: Array<string>) {
-  if (object == null || keys == null) {
-    return;
-  }
-  const keysString = arrayKeysToString(keys);
-
-  let finalKey = keysString;
-  if (keysString == null) {
-    finalKey = '';
-  } else if (!keysString.startsWith('[')) {
-    finalKey = `.${finalKey}`;
-  }
-
-  return eval(`object${finalKey}`);
-};
-
-const set = function(object: Object, keys: Array<string>, value: any) {
-  if (object == null || keys == null) {
-    return;
-  }
-
-  let keysLength = keys.length;
-
-  if (keysLength == 0) {
-    return;
-  } else {
-    let firstKey = keys[0];
-    let firstValue = object[firstKey];
-
-    if (firstValue == null) {
-      object[firstKey] = {};
-    } else if (typeof firstValue === 'string') {
-      delete object[firstKey];
-      object[firstKey] = {};
-    }
-
-    if (keysLength == 1) {
-      object[firstKey] = value;
-
-      return;
-    } else {
-      set(object[firstKey], keys.slice(1, keysLength), value);
-    }
-  }
-};
-
-class Properties {
+class Properties extends MultilevelObject {
 
   public path: any;
 
-  public properties: any;
-
   constructor() {
+    super();
+
     this.path = require('path');
 
-    this.properties = {
+    this.object = {
       constants: {
         // Only the root route is manually setted.
         router: {
@@ -199,44 +135,34 @@ class Properties {
         this.get(['constants', 'router', 'relative', '/'])
       )
     );
-  }
 
-  public get(keys: Array<string>): any {
-    return get(this.properties, keys);
-  }
-
-  public exists(keys: Array<string>): boolean {
-    return exists(this.properties, keys);
+    this.object = Object.freeze(this.object);
   }
 
   public getAbsoluteRoute(keys: Array<string>): string {
-    const root = get(this.properties, ['constants', 'router', 'absolute']);
+    const root = this.get(['constants', 'router', 'absolute']);
 
     return this.path.resolve.apply(this.path, [root, ...keys]);
   }
 
   public getRelativeRoute(keys: Array<string>): string {
-    return get(this.properties, ['constants', 'router', 'relative', ...keys]);
+    return this.get(['constants', 'router', 'relative', ...keys]);
   }
 
   public getDependencies(): any {
-    return get(this.properties, ['dependencies']);
+    return this.get(['dependencies']);
   }
 
   public getDependency(keys: Array<string>): any {
-    return get(this.properties, ['dependencies', ...keys]);
+    return this.get(['dependencies', ...keys]);
   }
 
   public isDependencyEnabled(dependency: string): boolean {
-    if (get(this.properties, ['dependencies', dependency, 'enabled'])) {
+    if (this.get(['dependencies', dependency, 'enabled'])) {
       return true;
     }
 
     return false;
-  }
-
-  private set(keys: Array<string>, value: any) {
-    set(this.properties, keys, value);
   }
 }
 
