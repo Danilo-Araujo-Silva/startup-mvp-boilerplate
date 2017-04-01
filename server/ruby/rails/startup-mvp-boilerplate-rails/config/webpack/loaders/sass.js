@@ -11,7 +11,11 @@ module.exports = {
     fallback: 'style-loader',
     use: [
       {loader: "css-loader"},
-      // {loader: "postcss-loader"}, // Enable this line cause import problems.
+      // Enable the next statament cause import problems.
+      // An import like `@import '~sanitize.css/sanitize.css'` not works when it is encapsulated on a
+      //  head.useable.scss and head.scss.
+      // TODO find a workaround, probably with postcss/postcss-loader.
+      // {loader: "postcss-loader"},
       {
         loader: "sass-loader",
         options: {
