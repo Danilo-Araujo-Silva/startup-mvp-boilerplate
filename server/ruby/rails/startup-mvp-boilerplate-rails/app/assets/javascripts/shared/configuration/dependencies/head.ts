@@ -36,5 +36,16 @@ if (properties.isDependencyEnabled('bootstrap-material-design')) {
   (<any>window).$.material.init();
 }
 
+// web - ui - material
+// dependencies: jquery
+if (properties.isDependencyEnabled('semantic-ui')) {
+  let semanticUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_semantic_ui.scss');
+  semanticUIStyles.use();
+
+  let semanticUIJS = require('semantic-ui/dist/semantic.js');
+} else {
+
+}
+
 let headCSS = require('!style-loader/useable!css-loader!sass-loader!shared/_head.scss');
 headCSS.use();

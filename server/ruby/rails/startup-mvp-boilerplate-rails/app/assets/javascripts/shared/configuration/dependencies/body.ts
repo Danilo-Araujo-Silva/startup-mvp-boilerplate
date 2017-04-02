@@ -54,17 +54,6 @@ if (properties.isDependencyEnabled('rails-ujs')) {
 
 }
 
-// web - ui - material
-// dependencies: jquery
-if (properties.isDependencyEnabled('semantic-ui')) {
-  let semanticUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_semantic_ui.scss');
-  semanticUIStyles.use();
-
-  let semanticUIJS = require('semantic-ui/dist/semantic.js');
-} else {
-
-}
-
 // rails
 // Rails dependency.
 if (properties.isDependencyEnabled('turbolinks')) {

@@ -89,7 +89,7 @@ class Properties extends MultilevelObject {
           enabled: false,
         },
         'semantic-ui': {
-          enabled: false,
+          enabled: true,
         },
         'tether': {
           enabled: false,
