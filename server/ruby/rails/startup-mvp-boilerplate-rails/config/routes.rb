@@ -28,6 +28,9 @@ Rails.application.routes.draw do
     get 'dashboard', to: redirect('/user')
   end
 
+  # namespace :webservice do
+  # end
+
   devise_scope :user do
     get '/create_account' => 'devise/registrations#new', as: 'new_user_registration' # custom path to sign_up/registration
   end
