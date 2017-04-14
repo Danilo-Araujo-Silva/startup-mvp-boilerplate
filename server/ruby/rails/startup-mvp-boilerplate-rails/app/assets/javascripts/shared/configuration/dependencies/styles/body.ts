@@ -1,4 +1,4 @@
-import properties from '../properties';
+import properties from './../../properties';
 
 let bodyCSS = require('!style-loader/useable!css-loader!sass-loader!shared/_body.scss');
 bodyCSS.use();
@@ -30,7 +30,6 @@ if (properties.isDependencyEnabled('font-roboto')) {
 // rails
 // Unobtrusive scripting adapter, necessary for routes.
 if (properties.isDependencyEnabled('jquery-ujs')) {
-  let jqueryUJS = require('jquery-ujs');
 } else {
 
 }
@@ -39,9 +38,6 @@ if (properties.isDependencyEnabled('jquery-ujs')) {
 if (properties.isDependencyEnabled('material-components-web')) {
   let materialComponentsWebStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_material_components_web.scss');
   materialComponentsWebStyles.use();
-
-  let materialComponentsWebJS = require('material-components-web/dist/material-components-web.js');
-  materialComponentsWebJS.autoInit();
 } else {
 
 }
@@ -49,7 +45,6 @@ if (properties.isDependencyEnabled('material-components-web')) {
 // rails
 // Unobtrusive scripting adapter, necessary for routes.
 if (properties.isDependencyEnabled('rails-ujs')) {
-  let railsUJS = require('rails-ujs');
 } else {
 
 }
@@ -57,7 +52,4 @@ if (properties.isDependencyEnabled('rails-ujs')) {
 // rails
 // Rails dependency.
 if (properties.isDependencyEnabled('turbolinks')) {
-  let turbolinks = require('turbolinks');
 }
-
-
