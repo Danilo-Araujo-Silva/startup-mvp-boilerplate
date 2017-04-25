@@ -1,6 +1,6 @@
 import properties from './../../properties';
 
-let bodyCSS = require('!style-loader/useable!css-loader!sass-loader!shared/_body.scss');
+let bodyCSS = require('!style-loader/useable!css-loader!sass-loader!body.scss');
 bodyCSS.use();
 
 // web - font - icons

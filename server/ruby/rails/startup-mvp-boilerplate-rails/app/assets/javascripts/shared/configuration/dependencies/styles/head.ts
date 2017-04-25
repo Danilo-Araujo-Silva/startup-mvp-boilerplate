@@ -33,5 +33,5 @@ if (properties.isDependencyEnabled('semantic-ui')) {
 
 }
 
-let headCSS = require('!style-loader/useable!css-loader!sass-loader!shared/_head.scss');
+let headCSS = require('!style-loader/useable!css-loader!sass-loader!head.scss');
 headCSS.use();

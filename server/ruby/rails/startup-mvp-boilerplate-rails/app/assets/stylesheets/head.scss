@@ -1,2 +1,15 @@
-@import 'shared/head';
-@import 'subsystems/head';
+@import 'shared/configuration/functions/map_deep_get';
+@import 'shared/configuration/functions/map_deep_set';
+
+@import 'shared/configuration/mixins/google_material_design';
+
+@import 'shared/configuration/themes/palette';
+@import 'shared/configuration/themes/themes';
+@import 'shared/configuration/themes/theme';
+
+@import 'shared/configuration/variables/application';
+
+@import 'shared/dependencies/ui/setup/sanitize';
+
+@include scheme-styles(base);
+@include scheme-styles(palette);
