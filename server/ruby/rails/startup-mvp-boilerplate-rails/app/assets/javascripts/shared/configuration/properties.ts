@@ -59,7 +59,7 @@ class Properties extends MultilevelObject {
           enabled: true,
         },
         'jquery-ujs': {
-          enabled: true,
+          enabled: false,
         },
         'material-components-web': {
           enabled: true,
@@ -80,7 +80,7 @@ class Properties extends MultilevelObject {
           enabled: false,
         },
         'rails-ujs': {
-          enabled: false,
+          enabled: true,
         },
         'react-tap-event-plugin': {
           enabled: false,

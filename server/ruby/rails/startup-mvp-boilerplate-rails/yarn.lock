@@ -5512,9 +5512,9 @@ rails-erb-loader@^3.2.0:
     loader-utils "^0.2.16"
     lodash.defaults "^4.2.0"
 
-rails-ujs@^5.1.0-rc1:
-  version "5.1.0-rc1"
-  resolved "https://registry.yarnpkg.com/rails-ujs/-/rails-ujs-5.1.0-rc1.tgz#75bf718ec737a252654298f28ee81ab4ee0e6075"
+rails-ujs@^5.1.0-beta1:
+  version "5.1.0-rc2"
+  resolved "https://registry.yarnpkg.com/rails-ujs/-/rails-ujs-5.1.0-rc2.tgz#bddd9bcb6cd89123bd9401f671bb15bd697ff544"
 
 randomatic@^1.1.3:
   version "1.1.6"
