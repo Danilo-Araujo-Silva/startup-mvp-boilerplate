@@ -36,7 +36,7 @@ if (properties.isDependencyEnabled('jquery-ujs')) {
 
 // web - ui - material
 if (properties.isDependencyEnabled('material-components-web')) {
-  let materialComponentsWebStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_material_components_web.scss');
+  let materialComponentsWebStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_material_components_web.scss');
   materialComponentsWebStyles.use();
 } else {
 

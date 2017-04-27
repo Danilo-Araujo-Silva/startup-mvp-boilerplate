@@ -2,7 +2,7 @@ import properties from '../properties';
 
 // angular - ui - material
 if (properties.isDependencyEnabled('@angular/material')) {
-  let angularMaterialStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_angular_material.scss');
+  let angularMaterialStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_angular_material.scss');
   angularMaterialStyles.use();
 } else {
 
@@ -18,7 +18,7 @@ if (properties.isDependencyEnabled('animate.css')) {
 
 // react - ui - material
 if (properties.isDependencyEnabled('ant-design')) {
-  let antDesignStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_ant_design.scss');
+  let antDesignStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_ant_design.scss');
   antDesignStyles.use();
 } else {
 
@@ -26,7 +26,7 @@ if (properties.isDependencyEnabled('ant-design')) {
 
 // web - ui - material
 if (properties.isDependencyEnabled('bulma')) {
-  let bulmaStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_bulma.scss');
+  let bulmaStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_bulma.scss');
   bulmaStyles.use();
 } else {
 
@@ -34,7 +34,7 @@ if (properties.isDependencyEnabled('bulma')) {
 
 // web - ui - material
 if (properties.isDependencyEnabled('flat-ui')) {
-  let flatUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_flat_ui.scss');
+  let flatUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_flat_ui.scss');
   flatUIStyles.use();
 } else {
 
@@ -50,7 +50,7 @@ if (properties.isDependencyEnabled('hover.css')) {
 
 // web - ui - material (deprecated, use material-components-web prefereably)
 if (properties.isDependencyEnabled('material-design-lite')) {
-  let materialDesignLiteStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_material_design_lite.scss');
+  let materialDesignLiteStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_material_design_lite.scss');
   materialDesignLiteStyles.use();
 
   let materialDesignLiteJS = require('material-design-lite/material.js');
@@ -60,7 +60,7 @@ if (properties.isDependencyEnabled('material-design-lite')) {
 
 // react - ui - material
 if (properties.isDependencyEnabled('material-ui')) {
-  let materialUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_material_ui.scss');
+  let materialUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_material_ui.scss');
   materialUIStyles.use();
 } else {
 
@@ -68,7 +68,7 @@ if (properties.isDependencyEnabled('material-ui')) {
 
 // web - ui - material
 if (properties.isDependencyEnabled('materialize-css')) {
-  let materializeCssStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_materialize_css.scss');
+  let materializeCssStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_materialize_css.scss');
   materializeCssStyles.use();
 
   require('materialize-css/dist/js/materialize.js');
@@ -78,7 +78,7 @@ if (properties.isDependencyEnabled('materialize-css')) {
 
 // angular - ui - material
 if (properties.isDependencyEnabled('primeng')) {
-  let primengStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_primeng.scss');
+  let primengStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_primeng.scss');
   primengStyles.use();
 } else {
 
@@ -86,7 +86,7 @@ if (properties.isDependencyEnabled('primeng')) {
 
 //
 if (properties.isDependencyEnabled('purecss')) {
-  let pureCSSStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_purecss.scss');
+  let pureCSSStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_purecss.scss');
   pureCSSStyles.use();
 } else {
 
@@ -102,7 +102,7 @@ if (properties.isDependencyEnabled('react-tap-event-plugin')) {
 
 // react - ui - material
 if (properties.isDependencyEnabled('react-toolbox')) {
-  let reactToolboxStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_react_toolbox.scss');
+  let reactToolboxStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_react_toolbox.scss');
   reactToolboxStyles.use();
 } else {
 
@@ -110,7 +110,7 @@ if (properties.isDependencyEnabled('react-toolbox')) {
 
 // vue - ui - material
 if (properties.isDependencyEnabled('vuetify')) {
-  let vuetifyStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_vuetify.scss');
+  let vuetifyStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_vuetify.scss');
   vuetifyStyles.use();
 } else {
 

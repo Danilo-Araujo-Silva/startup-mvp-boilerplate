@@ -13,21 +13,21 @@ if (properties.isDependencyEnabled('tether')) {
 // web - ui - material
 // dependencies: jquery, tether
 if (properties.isDependencyEnabled('bootstrap')) {
-  let bootstrapStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_bootstrap.scss');
+  let bootstrapStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_bootstrap.scss');
   bootstrapStyles.use();
 }
 
 // web - ui - material
 // dependencies: jquery
 if (properties.isDependencyEnabled('bootstrap-material-design')) {
-  let bootstrapMaterialDesignStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_bootstrap_material_design.scss');
+  let bootstrapMaterialDesignStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_bootstrap_material_design.scss');
   bootstrapMaterialDesignStyles.use();
 }
 
 // web - ui - material
 // dependencies: jquery
 if (properties.isDependencyEnabled('semantic-ui')) {
-  let semanticUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/material/_semantic_ui.scss');
+  let semanticUIStyles = require('!style-loader/useable!css-loader!sass-loader!shared/dependencies/ui/frameworks/_semantic_ui.scss');
   semanticUIStyles.use();
 } else {
 
