@@ -32,11 +32,11 @@ $scheme: (
         ),
         opacity-13: (
           normal: map-deep-get($_local, black-opacity-13),
-          contrast: map-deep-get($_local, white-opacity-87)
+          contrast: map-deep-get($_local, black-opacity-87)
         ),
         opacity-87: (
           normal: map-deep-get($_local, black-opacity-87),
-          contrast: map-deep-get($_local, white-opacity-13)
+          contrast: map-deep-get($_local, black-opacity-13)
         )
       ),
       mine-shaft: (
@@ -52,11 +52,11 @@ $scheme: (
         ),
         opacity-13: (
           normal: map-deep-get($_local, white-opacity-13),
-          contrast: map-deep-get($_local, black-opacity-87)
+          contrast: map-deep-get($_local, white-opacity-87)
         ),
         opacity-87: (
           normal: map-deep-get($_local, white-opacity-87),
-          contrast: map-deep-get($_local, black-opacity-13)
+          contrast: map-deep-get($_local, white-opacity-13)
         )
       )
     ),
